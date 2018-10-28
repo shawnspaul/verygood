@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-// import CardActionArea from '@material-ui/core/CardActionArea';
+import Divider from '@material-ui/core/Divider';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -69,6 +69,7 @@ class Home extends React.Component {
 							<h1>HIRE ME TO BUILD YOUR WEBSITE.<br/>OR DON'T.<br />I'M NOT GOING TO BEG.</h1>
 						</Grid>
 					</Grid>
+					<Divider />
 					<Grid container className={classes.root} style={{ maxWidth: 1500 }} justify="center" alignItems="center">
 						<Grid item xl={3} lg={3} md={12} sm={12} xs={12}>
 							<Card className={classes.card} >
@@ -125,7 +126,8 @@ class Home extends React.Component {
 							<p>
 								Let's cut right to the chase. We're all people who are trying to make it in this world. Maybe you're someone who is trying to 
 								start their own business and need a simple website to schedule appointments or just to display some information to help 
-								promote your business. 
+								promote your business. Or maybe your needs or slightly more complex than that. Whatever your needs may be, let's talk about it
+								and see if we can come up with a solution together.
 							</p>
 							<p>
 								Maybe you don't have the know how to do this yourself, or you don't have the resources to pay a company to do it for you.
