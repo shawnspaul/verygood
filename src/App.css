@@ -1,14 +1,19 @@
+
+html {
+  background-image: url('components/v.png');
+  background-size: 122px;
+}
 .App {
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  /*animation: App-logo-spin infinite 20s linear;*/
   height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #11214f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,4 +34,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+nav > span {
+  color:white;
+}
+
+h1 {
+  color: #11214f;
+  font-size:50px;
+  font-family: fantasy;
+  font-weight: 100;
+}
+
+.banner {
+  background:#ffffffe0;
+  padding:100px;
 }
