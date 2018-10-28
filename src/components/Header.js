@@ -58,7 +58,7 @@ class Header extends React.Component {
 				<AppBar position="static">
 		            <Toolbar style={{ backgroundColor: '#11214f', color:'#d4b878' }}>
 						<IconButton onClick={this.toggleDrawer('left', true)} className={styles.menuButton} color="inherit" aria-label="Menu">
-							<img style={{paddingRight:'15px',height:'40px'}} src={emblum} />
+							<MenuIcon/>
 						</IconButton>
 						<img style={{height:'25px'}} src={text} />
 						<Typography variant="title" color="inherit" className={styles.flex}>
@@ -68,7 +68,7 @@ class Header extends React.Component {
 		        </AppBar>
 		        <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
 			        <div tabIndex={0} role="button" onClick={this.toggleDrawer('left', false)} onKeyDown={this.toggleDrawer('left', false)}>
-						<img style={{margin:'25px',height:'55px'}} src={logo} />
+						<img style={{margin:'25px',height:'125px'}} src={emblum} />
 						<List component="nav" >
 							<div>
 								<Link to="/">
