@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Button from "@material-ui/core/Button";
 import Card from '@material-ui/core/Card';
 import Divider from '@material-ui/core/Divider';
 import CardActions from '@material-ui/core/CardActions';
@@ -22,6 +23,8 @@ const styles = theme => ({
 		marginTop: theme.spacing.unit * 5,
 		marginLeft: 'auto',
 		marginRight: 'auto',
+		maxWidth: 1500,
+		padding: 10,
 	},
 	paper: {
 		...theme.mixins.gutters(),
@@ -41,6 +44,11 @@ const styles = theme => ({
 		backgroundColor: '#11214f',
 		color: 'rgb(230, 218, 146)',
 		maxWidth: 345
+	},
+	contactButton: {
+	    backgroundColor: '#e4ddb1',
+	    color: '#11214f',
+	    float: 'right',
 	},
 });
 
@@ -66,11 +74,11 @@ class Home extends React.Component {
 							<img style={{margin:'25px',height:'250px'}} src={emblum} />
 						</Grid>
 						<Grid item sm={6}>
-							<h1>HIRE ME TO BUILD YOUR WEBSITE.<br/>OR DON'T.<br />I'M NOT GOING TO BEG.</h1>
+							<h1>HIRE ME TO BUILD YOUR WEBSITE.<br/>I'M VERY GOOD.</h1>
 						</Grid>
 					</Grid>
 					<Divider />
-					<Grid container className={classes.root} style={{ maxWidth: 1500 }} justify="center" alignItems="center">
+					<Grid container className={classes.root} justify="center" alignItems="center">
 						<Grid item xl={3} lg={3} md={12} sm={12} xs={12}>
 							<Card className={classes.card} >
 						        <CardMedia
@@ -124,23 +132,17 @@ class Home extends React.Component {
 						<Grid item xl={6} lg={8} md={10} sm={11} xs={11}>
 							<h2>What's this all about?</h2>
 							<p>
-								Let's cut right to the chase. We're all people who are trying to make it in this world. Maybe you're someone who is trying to 
-								start their own business and need a simple website to schedule appointments or just to display some information to help 
-								promote your business. Or maybe your needs or slightly more complex than that. Whatever your needs may be, let's talk about it
-								and see if we can come up with a solution together.
+								Let's cut right to the case. We're all just trying ot make it in this. You could be someone who is trying to start a business and you need a webiste.
+								Maybe your needs include displaying some information about your company to inform people who are you and what you do, or you need an application where
+								clients and schedule appointments. Or maybe your needs are a little more complex than that. Whatever your needs may be, let's talk about it and see
+								if we can find the right solution for you!
 							</p>
 							<p>
-								Maybe you don't have the know how to do this yourself, or you don't have the resources to pay a company to do it for you.
-								Paying an established company can be very expensive because of overhead costs. Consulting can be expensive. 
-								That's where VERY GOOD WEBSITE COMPANY comes in. I built this website up in less than a day. Do you like it?
-								This website is built in React.js, a framework that I'm currently teaching myself how to use. I have a good ability to 
-								figure out how certain technologies work and how I can use those technologies to accomplish goals.
-							</p>
-							<p>
-								My intent is to consult you, help you meet your needs within a reasonable and affordable budget, and to make a little extra money
-								aside from my full time job. I will always be honest with you, I will not cheat you out of your money, and if I can't provide what you're
+								I will always be honest with you, I will not cheat you out of your money, and if I can't provide what you're
 								looking for, I will let you know up front.
 							</p>
+							<Button color="inherit" className={classes.contactButton} size="large" component={Link} to="/contact">Contact</Button>
+							<br />
 						</Grid>
 					</Grid>
 				</Paper>

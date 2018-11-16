@@ -18,15 +18,29 @@ import logo from './color_logo_transparent.png';
 import emblum from './emblum.png';
 import text from './text.png';
 import v from './v.png';
+import purple from '@material-ui/core/colors/purple';
 
 const styles = theme => ({
+	root: {
+		flexGrow: 1,
+	},
 	flex: {
 		flex: 1,
-		textAlign:'left'
+		textAlign:'left',
+		flexGrow: 1,
 	},
 	menuButton: {
 		marginLeft: -12,
 		marginRight: 20,
+	},
+	contactButton: {
+	    // backgroundColor: '#e4ddb1',
+	    // color: '#11214f',
+	    float: 'right'
+	},
+	toolBar: {
+		backgroundColor: '#11214f', 
+		color:'#d4b878'
 	}
 });
 
@@ -52,11 +66,12 @@ class Header extends React.Component {
 		if (this.props.title !== undefined) {
 			this.title = this.props.title;
 		}
+		const { classes } = this.props;
 
 		return (
-			<div className="App">
+			<div className={classes.root}>
 				<AppBar position="static">
-		            <Toolbar style={{ backgroundColor: '#11214f', color:'#d4b878' }}>
+		            <Toolbar className={classes.toolBar}>
 						<IconButton onClick={this.toggleDrawer('left', true)} className={styles.menuButton} color="inherit" aria-label="Menu">
 							<MenuIcon/>
 						</IconButton>
@@ -64,6 +79,9 @@ class Header extends React.Component {
 						<Typography variant="title" color="inherit" className={styles.flex}>
 							{this.state.title}
 						</Typography>
+						<div style={{ width: '100%'}}>
+							<Button color="inherit" className={classes.contactButton} component={Link} to="/contact">Contact</Button>
+						</div>
 		            </Toolbar>
 		        </AppBar>
 		        <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
@@ -79,6 +97,11 @@ class Header extends React.Component {
 								<Link to="/about">
 									<ListItem button>
 										<ListItemText primary="About" />
+									</ListItem>
+								</Link>
+								<Link to="/contact">
+									<ListItem button>
+										<ListItemText primary="Contact" />
 									</ListItem>
 								</Link>
 								<Divider />

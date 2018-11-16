@@ -4,7 +4,7 @@ html {
   background-size: 122px;
 }
 .App {
-  text-align: left;
+  /*text-align: left;*/
 }
 
 .App-logo {
@@ -54,4 +54,9 @@ h1 {
 
 p {
   font-weight:bold;
+}
+
+.contactButton {
+    background-color: black;
+    color: white;
 }

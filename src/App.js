@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/Home';
 import Header from './components/Header';
 import About from './components/About';
+import Contact from './components/Contact';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <Route path={"/"} component={Header}>
             <IndexRoute component={Home}/>
             <Route path={"about"} component={About} />
+            <Route path={"contact"} component={Contact} />
           </Route>
       </Router>
     );
